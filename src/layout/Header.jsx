@@ -10,19 +10,19 @@ export default function Header() {
       templateColumns="max-content 1fr min-content"
       justifyItems="center"
       alignItems="center"
-      bg="black"
+      bg="white"
       position="sticky"
       top="0"
       zIndex="10"
-      borderBottom="20px solid #101010"
+      borderBottom="20px solid #edf2f7"
     >
       <GridItem justifySelf="start" m="2">
-        <Image src="/logo.png" height="120px" ml="2" />
+        <Image src="/logo.png" height="30px" ml="2" />
       </GridItem>
       {auth.user() ? (
         <>
           <GridItem justifySelf="end" alignSelf="center" mr="4">
-            Hola <strong>{username}</strong>
+            Welcome <strong>{username}</strong>
           </GridItem>
           <Button
             marginRight="4"
@@ -47,7 +47,7 @@ export default function Header() {
           <Button
             size="sm"
             marginRight="2"
-            colorScheme="gray"
+            colorScheme="teal"
             rightIcon={<FaGithub />}
             variant="outline"
             onClick={() =>
